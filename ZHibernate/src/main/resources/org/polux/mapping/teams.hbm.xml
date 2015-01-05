@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="org.polux.domain.Teams" table="TEAMS">
+ 	<id name="id" type="long" column="tmt_id">
+ 		<generator class="sequence">
+ 			<param name="sequence">teams_seq</param>
+ 		</generator>
+ 	</id>
+ 	
+ 	<property name="name" column="tmt_name" type="string"></property>
+ 	<property name="constructor_champions" column="tmt_const_champ" type="int"></property>
+ 	<property name="last_season" column="tmt_last_season" type="int"></property>
+ 	
+ </class>
+</hibernate-mapping>
