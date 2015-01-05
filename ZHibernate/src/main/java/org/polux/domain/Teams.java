@@ -6,12 +6,11 @@ public class Teams {
 	private String name;
 	private int constructor_champions;
 	private int last_season;
-	
+
 	public Teams() {
 	}
 
-	public Teams(String name, int constructor_champions,
-			int last_season) {
+	public Teams(String name, int constructor_champions, int last_season) {
 		this.name = name;
 		this.constructor_champions = constructor_champions;
 		this.last_season = last_season;
@@ -47,5 +46,15 @@ public class Teams {
 
 	public void setLast_season(int last_season) {
 		this.last_season = last_season;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Teams [id=").append(id).append(", name=").append(name)
+				.append(", constructor_champions=")
+				.append(constructor_champions).append(", last_season=")
+				.append(last_season).append("]");
+		return builder.toString();
 	}
 }
