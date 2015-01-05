@@ -19,7 +19,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>org.polux.entry.HibernateLauncher</mainClass>
+                  <mainClass>org.polux.start.HibernateLauncher</mainClass>
                 </transformer>
               </transformers>
             </configuration>

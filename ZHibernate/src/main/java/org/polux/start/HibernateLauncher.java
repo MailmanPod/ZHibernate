@@ -1,4 +1,4 @@
-package org.polux.entry;
+package org.polux.start;
 
 import org.polux.utility.UtilityLauncher;
 
