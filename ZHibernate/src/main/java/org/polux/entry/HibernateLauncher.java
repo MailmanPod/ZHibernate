@@ -11,7 +11,7 @@ import org.hibernate.cfg.Configuration;
 import org.polux.domain.Teams;
 import org.polux.utility.AddItemUtility;
 
-public class HibernateEntry {
+public class HibernateLauncher {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

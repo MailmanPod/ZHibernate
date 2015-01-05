@@ -8,6 +8,7 @@
   <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
   <property name="hibernate.connection.username">RZR</property>
   <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+  <property name="hibernate.connection.pool_size">1</property>
   <mapping class="org.polux.domain.Teams" resource="org/polux/mapping/teams.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>
