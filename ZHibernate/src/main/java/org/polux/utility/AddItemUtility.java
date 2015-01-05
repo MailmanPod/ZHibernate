@@ -1,5 +1,6 @@
 package org.polux.utility;
 
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -16,7 +17,8 @@ public class AddItemUtility {
 	public AddItemUtility(SessionFactory sessionLocal, Teams itemIn, Logger logger) {
 		this.sessionLocal = sessionLocal;
 		this.itemIn = itemIn;
-		this.localLogger = logger;
+		//this.localLogger = logger;
+		this.localLogger = LogManager.getLogger();
 	}
 	
 	
@@ -47,7 +49,7 @@ public class AddItemUtility {
 			
 		}finally {
 			
-			localLogger.info("Closing connection");
+			localLogger.warn("Closing connection");
 			session.close();
 		}
 		
