@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.polux.domain.Engine;
 import org.polux.domain.Teams;
 
 public final class UtilityLauncher {
@@ -69,18 +70,28 @@ public final class UtilityLauncher {
 
 		logger.info("Building Item information");
 
-		String name = args[1];
-		int constructor_champions = Integer.parseInt(args[2]);
-		int last_season = Integer.parseInt(args[3]);
+		String generic1 = args[1];
+		int generic2 = Integer.parseInt(args[2]);
+		//int generic3 = Integer.parseInt(args[3]);
+		String generic3 = args[3]; //use only with Engine objects
 
-		Teams t1 = new Teams(name, constructor_champions, last_season);
+		//Teams t1 = new Teams(generic1, generic2, generic3);
+		
+		Engine t1  = new Engine(generic1, generic2, generic3);
 
-		logger.info("Item Created: " + t1.toString());
+		//logger.info("Item Created: " + t1.toString());
 
 		logger.info("Calling add Utility");
-		AddItemUtility addUtility = new AddItemUtility(factory, t1);
-
-		addUtility.addItem();
+		AddItemUtility addUtility = new AddItemUtility(factory);
+		
+		//addUtility.setItemTeam(t1);
+        //addUtility.addItemTeam();
+		
+		addUtility.setItemEngine(t1);
+		Long id = addUtility.addItemEngine();
+		t1.setId(id);
+		
+		logger.info("Item Inserted: " + t1.toString());
 
 		logger.warn("Closing session factory");
 		factory.close();

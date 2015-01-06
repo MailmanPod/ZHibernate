@@ -10,5 +10,6 @@
   <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
   <property name="hibernate.connection.pool_size">1</property>
   <mapping class="org.polux.domain.Teams" resource="org/polux/mapping/teams.hbm.xml"/>
+  <mapping class="org.polux.domain.Engine" resource="org/polux/mapping/engine.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>

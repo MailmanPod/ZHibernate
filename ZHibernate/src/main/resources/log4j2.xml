@@ -5,7 +5,7 @@
 			<PatternLayout pattern="[%-5level] %logger{36} %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] - %msg%n"></PatternLayout> 
 		</Console>
 		
-		<File name="Log" fileName="E:\AppsLog\rzr_zhibernate.log">
+		<File name="Log" fileName="C:\AppsLog\rzr_zhibernate.log">
 			<PatternLayout pattern="[%-5level] %logger{36} %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] - %msg%n"></PatternLayout>
 		</File>
 	</Appenders>
